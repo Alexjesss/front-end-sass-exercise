@@ -1,3 +1,5 @@
+@use 'ColoredLinks';
+
 $shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
 $padding: 8px;
 
@@ -12,7 +14,7 @@ article {
   flex-wrap: wrap;
 
   section{
-    flex-grow: 1;
+    flex-grow: 2;
     flex-basis: 45%;
     border: 1px silver solid;
     @include shadows;
@@ -27,8 +29,6 @@ article {
     flex-grow: 2;
     flex-basis: 100%
   }
-
-
 
 }
 
@@ -110,25 +110,7 @@ h6 {
   @extend %message;
 }
 
-$redLink: red;
-$whiteLink: white;
-$background: lightgrey;
 
-&:focus, &:active .redLink{
-  color: $redLink;
-  background-color: $background;
-}
-
-.redLink {
-  color: $whiteLink !important;
-  width: 15px;
-  height: 15px;
-  text-decoration: none !important;
-}
-
-.blueLink {
-  @extend .redLink;
-}
 
 h1,
 h2,
